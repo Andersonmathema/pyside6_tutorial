@@ -29,16 +29,15 @@ class Window(QMainWindow):
         font = QFont()
         font.setPixelSize(90)
 
-        label = QLabel('Deixa um like!')
-        label.setFont(font)
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter) 
+        self.label = QLabel('Deixa um like!')
+        self.label.setFont(font)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter) 
 
         botao = QPushButton('Botão!')
         botao.setFont(font)
-        botao.clicked.connect(callback) # Conectando o botão a função
-        botao.clicked.connect(callback2) # Conectando o botão a uma segunda função
+        botao.clicked.connect(self.muda_label) # Conectando o botão a função
 
-        layout.addWidget(label) 
+        layout.addWidget(self.label) 
         layout.addWidget(botao) 
 
         base.setLayout(layout) 
@@ -51,6 +50,9 @@ class Window(QMainWindow):
         action = QAction('Print!')
         action.triggered.connect(callback2)
         arquivo_menu.addAction(action) 
+
+    def muda_label(self):
+        self.label.setText('Clicado')
 
 
 app = QApplication() 
