@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Implemente os seguintes eventos:
@@ -28,19 +29,19 @@ class MainWindow(QMainWindow):
 
     def mouseMoveEvent(self, event):
         # TODO
-        pass
+        self.label.setText('Mouse movido')
 
     def mousePressEvent(self, event):
         # TODO
-        pass
+        self.label.setText('Botão pressionado')
 
     def mouseReleaseEvent(self, event):
         # TODO
-        pass
+        self.label.setText('Botão liberado')
 
     def mouseDoubleClickEvent(self, event):
         # TODO
-        pass
+        self.label.setText('Clique duplo')
 
 
 app = QApplication(sys.argv)

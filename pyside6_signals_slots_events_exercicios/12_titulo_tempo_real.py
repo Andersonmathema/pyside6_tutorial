@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Crie um QLineEdit.
@@ -19,7 +20,7 @@ class MainWindow(QMainWindow):
         self.input = QLineEdit()
 
         # TODO:
-        # self.input.textChanged.connect(________________)
+        self.input.textChanged.connect(self.setWindowTitle)
 
         self.setCentralWidget(self.input)
 

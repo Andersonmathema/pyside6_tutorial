@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Crie um QLineEdit e um QLabel.
@@ -28,7 +29,7 @@ class MainWindow(QMainWindow):
         self.label = QLabel("Digite alguma coisa")
 
         # TODO: conexão direta entre os widgets.
-        # self.input.____________.connect(self.label.________)
+        self.input.textChanged.connect(self.label.setText)
 
         layout = QVBoxLayout()
         layout.addWidget(self.input)

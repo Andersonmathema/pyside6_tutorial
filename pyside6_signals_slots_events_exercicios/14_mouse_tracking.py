@@ -20,16 +20,18 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # TODO: ative mouse tracking na janela.
+        self.setMouseTracking(True)
 
         self.label = QLabel("Mova o mouse")
 
         # TODO: ative mouse tracking no label.
+        self.label.setMouseTracking(True)
 
         self.setCentralWidget(self.label)
 
     def mouseMoveEvent(self, event):
         # TODO: mostre X e Y.
-        pass
+        self.label.setText()
 
 
 app = QApplication(sys.argv)

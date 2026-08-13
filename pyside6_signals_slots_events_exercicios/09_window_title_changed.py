@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Detecte alterações no título da janela usando windowTitleChanged.
@@ -30,10 +31,11 @@ class MainWindow(QMainWindow):
     def change_title(self):
         self.setWindowTitle("Novo título")
 
-    def title_changed(self, title):
+    def title_changed(self, title: str):
         # TODO: mostre o título recebido.
-        title = self.
-        print(f'O novo título é: {title}')
+        self.title = title
+        self.windowTitle = title
+        print(f'O novo título é: {self.title}')
 
 
 app = QApplication(sys.argv)

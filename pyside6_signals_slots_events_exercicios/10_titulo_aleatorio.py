@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 A cada clique, escolha aleatoriamente um dos títulos abaixo:
@@ -34,16 +35,19 @@ class MainWindow(QMainWindow):
         self.button.clicked.connect(self.change_title)
 
         # TODO: conecte windowTitleChanged a title_changed.
+        self.windowTitleChanged.connect(self.title_changed)
 
         self.setCentralWidget(self.button)
 
     def change_title(self):
         # TODO: escolha um título e aplique com setWindowTitle().
-        pass
+        self.setWindowTitle(choice(WINDOW_TITLES))
 
     def title_changed(self, title):
         # TODO: se title == "Erro crítico", desabilite o botão.
-        pass
+        self.windowTitle = title
+        if title == 'Erro crítico':
+            self.button.setDisabled(True)
 
 
 app = QApplication(sys.argv)
