@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Identifique qual botão do mouse foi pressionado.
@@ -24,7 +25,12 @@ class MainWindow(QMainWindow):
 
     def mousePressEvent(self, event):
         # TODO: teste event.button() e altere o texto do QLabel.
-        pass
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.label.setText('Esquerda')
+        elif event.button() == Qt.MouseButton.RightButton:
+            self.label.setText('Direita')
+        elif event.button() == Qt.MouseButton.MiddleButton:
+            self.label.setText('Meio')
 
 
 app = QApplication(sys.argv)

@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Ative o rastreamento do mouse para que mouseMoveEvent seja disparado sem a
@@ -12,6 +13,7 @@ Mostre as coordenadas do mouse no QLabel.
 """
 
 import sys
+from PySide6.QtCore import QPointF
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 
 
@@ -31,8 +33,10 @@ class MainWindow(QMainWindow):
 
     def mouseMoveEvent(self, event):
         # TODO: mostre X e Y.
-        self.label.setText()
-
+        x = event.globalPosition().x()
+        y = event.globalPosition().y()
+        self.label.setText(f'X:{x}, Y:{y}')
+    
 
 app = QApplication(sys.argv)
 window = MainWindow()

@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
     def change_title(self):
         self.setWindowTitle("Novo título")
 
-    def title_changed(self, title: str):
+    def title_changed(self, title):
         # TODO: mostre o título recebido.
         self.title = title
         self.windowTitle = title
