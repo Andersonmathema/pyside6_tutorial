@@ -35,13 +35,13 @@ Com ele é possível desenvolver:
 
 ## ✅ Fundamentos
 
-* [ ] Instalação do PySide6
-* [ ] Estrutura de um projeto
-* [ ] QApplication
-* [ ] QWidget
+* [x] Instalação do PySide6
+* [x] Estrutura de um projeto
+* [x] QApplication
+* [x] QWidget
 * [ ] Layouts (VBox, HBox, Grid)
-* [ ] QPushButton
-* [ ] QLabel
+* [x] QPushButton
+* [x] QLabel
 * [ ] QLineEdit
 * [ ] QTextEdit
 * [ ] QCheckBox

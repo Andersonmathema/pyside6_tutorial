@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Quando o usuário clicar na janela, mostre no QLabel a posição local do clique:
@@ -23,10 +24,12 @@ class MainWindow(QMainWindow):
 
     def mousePressEvent(self, event):
         # TODO:
-        # position = event.________()
-        # x = ...
-        # y = ...
-        pass
+        position = event.position()
+        x = position.x()
+        y = position.y()
+
+        self.label.setText(f'X: {x}, Y: {y}')
+        
 
 
 app = QApplication(sys.argv)
