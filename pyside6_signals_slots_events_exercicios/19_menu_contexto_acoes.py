@@ -32,15 +32,27 @@ class MainWindow(QMainWindow):
 
     def contextMenuEvent(self, event):
         # TODO: crie e conecte as quatro ações.
-        pass
+        context = QMenu(self)
+        context.addAction(QAction("Limpar texto", self.clear_line))
+        context.addAction(QAction("Desabilitar campo", self.disable_input))
+        context.addAction(QAction("Alterar título", self.change_title))
+        context.addAction(QAction("Fechar", self.close))
+        context.exec(event.globalPos())
+
+
+    def clear_line(self):
+        self.input.clear()
 
     def disable_input(self):
         # TODO
-        pass
+        self.input.setDisabled(True)
 
     def change_title(self):
         # TODO
-        pass
+        self.setWindowTitle("Novo título")
+
+    def close_window(self):
+        self.close(True)
 
 
 app = QApplication(sys.argv)

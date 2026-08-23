@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Combine o botão pressionado e a posição do clique.
@@ -25,8 +26,13 @@ class MainWindow(QMainWindow):
 
     def mousePressEvent(self, event):
         # TODO: obtenha posição e botão e monte a mensagem.
-        pass
-
+        x = event.position().x()
+        y = event.position().y()
+        botao = event.button()
+        if botao == Qt.MouseButton.LeftButton:
+            self.label.setText(f'Botão esquerdo em X={x}, Y={y}')
+        else:
+            self.label.setText(f'Botão direito em X={x}, Y={y}')
 
 app = QApplication(sys.argv)
 window = MainWindow()

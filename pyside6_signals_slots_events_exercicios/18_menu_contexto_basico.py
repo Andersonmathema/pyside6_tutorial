@@ -1,3 +1,4 @@
+# RESOLVIDO
 """Enunciado
 
 Crie um menu de contexto com três ações:
@@ -27,7 +28,11 @@ class MainWindow(QMainWindow):
 
     def contextMenuEvent(self, event):
         # TODO: crie o QMenu, adicione três ações e exiba-o.
-        pass
+        menu = QMenu(self)
+        menu.addAction(QAction("Copiar", self))
+        menu.addAction(QAction("Colar", self))
+        menu.addAction(QAction("Apagar", self))
+        menu.exec(event.globalPos())        
 
 
 app = QApplication(sys.argv)
